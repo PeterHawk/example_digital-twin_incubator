@@ -6,9 +6,11 @@ Before starting any service, make sure you have [docker](https://www.docker.com/
 1. [Rabbitmq README](../incubator/communication/installation/README.md)
 2. [Influxdb README](../digital_twin/data_access/influxdbserver/README.md)
 
-The script [start_all_services.py](./start_all_services.py) starts all services (including the mock of the incubator hardware). The library module can be run as a script by giving -m to the python command as follows:
+The script [start_all_services.py](./start_all_services.py) starts all services (including the mock of the incubator hardware). As the Example Digital Twin rely on the Example Incubator project, it's important that the Python path to this folder is set.
+The library module can be run as a script by giving -m to the python command as follows:
 
 ```bash
+software$ export PYTHONPATH="incubator"  
 software$ python -m startup.start_all_services
 ```
 
